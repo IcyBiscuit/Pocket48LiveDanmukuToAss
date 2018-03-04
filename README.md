@@ -5,21 +5,21 @@ B站直播弹幕获取以及ass字幕生成
 如有需要自行修改代码
 第一次写代码质量太差请见谅
 
-###JVM版本
+### JVM版本
 > java version "9"
 Java(TM) SE Runtime Environment (build 9+181)
 Java HotSpot(TM) 64-Bit Server VM (build 9+181, mixed mode)
 
-###录制B站直播弹幕使用方法
+### 录制B站直播弹幕使用方法
 `java -jar filepath/GetXXXDanmuku.jar filepath`
 
-###弹幕录制文件转ass字幕文件
+### 弹幕录制文件转ass字幕文件
 `java -jar filepath/BilibiliDanmukuProcessor.jar danmukuFilepath yyyy-MM-dd-hh-mm-ss`
 or
 `java -jar filepath/BilibiliDanmukuProcessor.jar danmukuFilepath yyyy-MM-dd-hh:mm:ss`
 
 
-###口袋48弹幕lrc文件转ass
+### 口袋48弹幕lrc文件转ass
 `java -jar filepath/Pocket48*.jar lrcfilepath`
 其中Fix为固定弹幕，Move为滚动弹幕
 
