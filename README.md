@@ -13,7 +13,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 9+181, mixed mode)
 ### 录制B站直播弹幕使用方法
 `java -jar filepath/GetXXXDanmuku.jar filepath`
 
-### 弹幕录制文件转ass字幕文件
+### 弹幕录制文件转ass字幕文件
 `java -jar filepath/BilibiliDanmukuProcessor.jar danmukuFilepath yyyy-MM-dd-hh-mm-ss`
 or
 `java -jar filepath/BilibiliDanmukuProcessor.jar danmukuFilepath yyyy-MM-dd-hh:mm:ss`
