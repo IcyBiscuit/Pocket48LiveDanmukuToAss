@@ -17,7 +17,7 @@ public class DanmukuAnalyze {
         Set<String> danmuku=new HashSet<>();
         try {
 
-            reader = new BufferedReader(new FileReader(new File("/Users/icybiscuit/Downloads/danmuku/GNZ/2018_03_02_07_23.danmuku")));
+            reader = new BufferedReader(new FileReader(new File("/Users/icybiscuit/Downloads/danmuku/GNZ/2018_03_18_06_47.danmuku")));
             while ((JSONLine = reader.readLine()) != null) {
                 JSONObject jsonObject = JSONObject.parseObject(JSONLine);
                 JSONObject json = JSONObject.parseObject(jsonObject.getString("data"));

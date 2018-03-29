@@ -1,5 +1,6 @@
 package com.live48.bilibili;
 
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -29,7 +30,6 @@ public class PostToBilibili {
 
             httpClients = HttpClients.createDefault();
             httpPost = new HttpPost(url);
-
             List<NameValuePair> list = new ArrayList<>();
             Iterator iterator = map.entrySet().iterator();
 

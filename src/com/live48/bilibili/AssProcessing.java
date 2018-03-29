@@ -97,9 +97,9 @@ public class AssProcessing {
 
         final String Events = String.format("[Events]\n" +
                 "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n" +
-                "Dialogue: 2,0:00:00.00,0:00:8.00,Description,,0,0,0,,{\\\\fad(200,200)\\\\b1}压制：IcyBiscuit{\\\\b}\n" +
-                "Dialogue: 2,0:00:00.00,0:00:8.00,Description,,0,0,0,,{\\\\fad(200,200)\\\\b1}视频源：live.gnz48.com{\\\\b}\n" +
-                "Dialogue: 2,0:00:00.00,0:00:8.00,Description,,0,0,0,,{\\\\fad(200,200)\\\\b1}弹幕来源：GNZ48 bilibili直播间{\\\\b}");
+                "Dialogue: 2,0:00:00.00,0:00:8.00,Description,,0,0,0,,{\\\\fad(200,200)\\\\b1}压制: IcyBiscuit{\\\\b}\n" +
+                "Dialogue: 2,0:00:00.00,0:00:8.00,Description,,0,0,0,,{\\\\fad(200,200)\\\\b1}视频源: 口袋48{\\\\b}\n" +
+                "Dialogue: 2,0:00:00.00,0:00:8.00,Description,,0,0,0,,{\\\\fad(200,200)\\\\b1}弹幕来源: 口袋48{\\\\b}");
 
         StringBuilder header = new StringBuilder();
 
@@ -173,7 +173,7 @@ public class AssProcessing {
 
             String[] time = new String[2];
             try {
-                time = TimeCal.calTime("1970-01-01-00:00:00", inputFormat.format(LrcDateFormat.parse(danmukuStartTime)));
+                time = TimeCal.calTime("1970-01-01-00-00-00", inputFormat.format(LrcDateFormat.parse(danmukuStartTime)));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -187,8 +187,8 @@ public class AssProcessing {
                 pos_e = -15 * text.length();
                 pos_y = (1 + lineNum % 5) * 45;
 
-                String line = String.format("Dialogue: 0,%s.00,%s.00,Default,,0,0,0,,{\\move(%.1f,%d,%.1f,%d)}%s\n",
-                        start, end, pos_s, pos_y, pos_e, pos_y, splitText[1]);
+                String line = String.format("Dialogue: 0,%s.00,%s.00,Default,,0,0,0,,{\\move(%.1f,%d,%.1f,%d)}%s (%s)\n",
+                        start, end, pos_s, pos_y, pos_e, pos_y, splitText[1],splitText[0]);
 
                 return line;
             }
